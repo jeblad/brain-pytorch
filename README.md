@@ -60,11 +60,12 @@ x = torch.rand( 3 )
 print( x )
 ```
 
-This will give something like `tensor([0.123, 0.456, 0.789])` if torch work properly.
+This will give something like `tensor([0.123, 0.456, 0.789])` if torch is working properly.
 
 A simple check to see if CUDA is available
 
 ```python
+import torch
 torch.cuda.is_available()
 ```
 
