@@ -1,4 +1,4 @@
-name: pytorch
+name: brain-pytorch
 channels:
   - defaults
 dependencies:
