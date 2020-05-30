@@ -1,5 +1,6 @@
 # brain-pytorch
 
+[![LICENSE](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)](https://github.com/jeblad/brain-pytorch/blob/master/LICENSE)
 [![Python](https://img.shields.io/badge/python-3.7-blue.svg?style=for-the-badge)](https://www.python.org/)
 ![stability-experimental](https://img.shields.io/badge/stability-experimental-orange.svg?style=for-the-badge)
 ![GitHub issues](https://img.shields.io/github/issues-raw/jeblad/brain-pytorch?style=for-the-badge)
