@@ -41,3 +41,31 @@ The conda environment can be re-exported with
 ```bash
 conda env export --prefix <PATH> --name brain-pytorch --file conda.yml
 ```
+
+## Tests
+
+A simple check on a working environment (run this in interactive `python`)
+
+```Python
+import torch
+```
+
+This will give an error message if torch is not found in the environment.
+
+A simple check on a working PyTorch installation
+
+```Python
+import torch
+x = torch.rand( 3 )
+print( x )
+```
+
+This will give something like `tensor([0.123, 0.456, 0.789])` if torch work properly.
+
+A simple check to see if CUDA is available
+
+```python
+torch.cuda.is_available()
+```
+
+This will give `True` if CUDA is found and working properly.
