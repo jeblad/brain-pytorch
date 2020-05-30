@@ -20,5 +20,11 @@ This extends the PyTorch library, and the prerequisites for PyTorch (and cuda) s
 2. Change to the development directory and create the environment
 
 ```bash
-conda create -n pytorch python=3.7
+conda env create -f=conda.yml
+```
+
+The conda environment can be re-exported with
+
+```bash
+conda env export --name pytorch > conda.yml
 ```
