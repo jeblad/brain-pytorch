@@ -17,7 +17,7 @@ This extends the PyTorch library, and the prerequisites for PyTorch (and cuda) s
 
 1. Download from [Github](https://github.com/jeblad/brain-pytorch) ([zip](https://github.com/jeblad/brain-pytorch/archive/master.zip)) and place the file(s) in a properly named development directory.
 
-2. Change to the development directory and create the environment
+2. Change to the development directory and create the environment (with `PATH` like `/home/john/.conda/envs/pytorch`)
 
 ```bash
 conda env create --prefix <PATH> --file conda.yml # possibly with --force
