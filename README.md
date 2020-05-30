@@ -68,4 +68,4 @@ A simple check to see if CUDA is available
 torch.cuda.is_available()
 ```
 
-This will give `True` if CUDA is found and working properly.
+This will give `True` if CUDA is found and working properly. Still, it might give `True` even if a GPU is missing.
