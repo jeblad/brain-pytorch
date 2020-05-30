@@ -6,3 +6,19 @@
 ![GitHub issues](https://img.shields.io/github/issues-raw/jeblad/brain-pytorch?style=for-the-badge)
 
 A PyTorch implementation of some simplified computing elements from the brain. The elements are according to a somewhat coarse and rudimentary theory on how parts of the brain might work.
+
+## Usage
+
+
+
+## Development
+
+This extends the PyTorch library, and the prerequisites for PyTorch (and cuda) should be installed. Please refer to [PyTorch: Get Started](https://pytorch.org/get-started/locally/).
+
+1. Download from [Github](https://github.com/jeblad/brain-pytorch) ([zip](https://github.com/jeblad/brain-pytorch/archive/master.zip)) and place the file(s) in a properly named development directory.
+
+2. Change to the development directory and create the environment
+
+```bash
+conda create -n pytorch python=3.7
+```
