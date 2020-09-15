@@ -34,18 +34,18 @@ This extends the PyTorch library, and the prerequisites for PyTorch (and cuda) s
 
 2. Change to the development directory and create the environment (with `<PATH>` like `/home/john/.conda/envs/pytorch`)
 
-   .. code:: bash
+   .. code-block:: bash
 
       conda env create --prefix <PATH> --file conda.yml # possibly with --force
 
    or
 
-   .. code:: bash
+   .. code-block:: bash
 
       conda env update --prefix <PATH> --name pytorch --file conda.yml
 
 If necessary, the conda environment can be re-exported with
 
-   .. code:: bash
+   .. code-block:: bash
 
         conda env export --prefix <PATH> --name pytorch --file conda.yml
