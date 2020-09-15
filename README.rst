@@ -19,3 +19,33 @@ A PyTorch implementation of some simplified computing elements from the brain. T
 
 .. |Documentation Status| image:: https://readthedocs.org/projects/brain-pytorch/badge/?style=for-the-badge&version=latest
    :target: https://brain-pytorch.readthedocs.io/en/latest/?badge=latest
+
+Usage
+-----
+
+Empty for now.
+
+Development
+-----------
+
+This extends the PyTorch library, and the prerequisites for PyTorch (and cuda) should be installed. Please refer to `PyTorch: Get Started <https://pytorch.org/get-started/locally/>`_.
+
+1. Download from `Github <https://github.com/jeblad/brain-pytorch>`_ (`zip <https://github.com/jeblad/brain-pytorch/archive/master.zip>`_) and place the file(s) in a properly named development directory.
+
+2. Change to the development directory and create the environment (with `<PATH>` like `/home/john/.conda/envs/pytorch`)
+
+   .. code:: bash
+
+      conda env create --prefix <PATH> --file conda.yml # possibly with --force
+
+   or
+
+   .. code:: bash
+
+      conda env update --prefix <PATH> --name pytorch --file conda.yml
+
+If necessary, the conda environment can be re-exported with
+
+   .. code:: bash
+
+        conda env export --prefix <PATH> --name pytorch --file conda.yml
