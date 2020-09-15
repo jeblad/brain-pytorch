@@ -19,7 +19,7 @@ This extends the PyTorch library, and the prerequisites for PyTorch (and cuda) s
 
 	```bash
 	conda env create --file conda.yml # possibly with --force
-	conda env create --prefix <PATH> --file conda.yml # possibly with `<PATH>` like `/home/john/.conda/envs/pytorch`
+	conda env create --prefix <PATH> --file conda.yml # with `<PATH>` like `/home/john/.conda/envs/pytorch`
 	```
 
 	or
@@ -40,12 +40,12 @@ The conda environment can be re-exported with
 conda env export --prefix <PATH> --name brain-pytorch --file conda.yml
 ```
 
-## Tests
+## Simple Tests
 
-A simple check on a working environment (run this in interactive `python`)
+A simple check on a working environment (run this in an interactive `python` shell)
 
 ```Python
-import torch
+>>> import torch
 ```
 
 This will give an error message if torch is not found in the environment.
@@ -54,17 +54,39 @@ A simple check on a working PyTorch installation
 
 ```Python
 import torch
-x = torch.rand( 3 )
-print( x )
+>>> >>> x = torch.rand( 3 )
+>>> print( x )
+tensor([0.0889, 0.0143, 0.4892])
 ```
 
-This will give something like `tensor([0.123, 0.456, 0.789])` if torch is working properly.
+This will give a tensor as output if torch is working properly.
 
 A simple check to see if CUDA is available
 
 ```python
 import torch
-torch.cuda.is_available()
+>>> torch.cuda.is_available()
+True
 ```
 
-This will give `True` if CUDA is found and working properly. Still, it might give `True` even if a GPU is missing.
+This will give a boolean true if CUDA is found and working properly. Still, it might give true even if a GPU is missing.
+
+A simple check to see if GPU is visible from pytorch
+
+```Python
+import torch
+
+>>> torch.cuda.current_device()
+0
+
+>>> torch.cuda.device(0)
+<torch.cuda.device object at 0x7f7555a4db90>
+
+>>> torch.cuda.device_count()
+1
+
+>>> torch.cuda.get_device_name(0)
+'GeForce GTX 960'
+```
+
+All example output can be different for an actual run.
