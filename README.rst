@@ -46,6 +46,6 @@ This extends the PyTorch library, and the prerequisites for PyTorch (and cuda) s
 
 If necessary, the conda environment can be re-exported with
 
-   .. code-block:: bash
+.. code-block:: bash
 
-        conda env export --prefix <PATH> --name pytorch --file conda.yml
+      conda env export --prefix <PATH> --name pytorch --file conda.yml
