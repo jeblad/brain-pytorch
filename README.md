@@ -42,14 +42,20 @@ cortex = brain.grid(123, 456, macrosize = 10)
 cortex = brain.grid(123, 456, macrosize-x = 10, macrosize-y = 10)
 ```
 
-In the previous cases only a microcolumn is injected at each grid cell with some attributes. If necessary, it is possible to adjust the attributes at individual cells
+A human has about 2×10⁸ microcolumns, or 200M microcolumns. That is something similar to a call `brain.grid(14142, 14142)`. Not that scary, but unfortunately inside each microcolumn a lot goes on, and we can only achieve a tiny part of the necessary compute power.
+
+In the previous cases only a single microcolumn is injected at each grid cell with some attributes. If necessary, it is possible to adjust the attributes at individual cells
 
 ```python
 # override the attributes at location (2,3)
 cortex[2,3] = brain.attr(macrosize = 20)
 ```
 
-To do something useful compute paths must be injected. Within the boundaries of the grid the primary compute path is set for one or more layers over a part of the cortex
+### Primary compute path
+
+To do something useful compute paths must be injected. The primary compute path is a slightly odd form of residual neural network connected as an autoencoder, but with additional oddities. Suffice to say it will try to reconstruct what pattern exists in the basal layer from the pattern in the apical layer.
+
+Within the boundaries of the grid the primary compute path is set for one or more layers over a part of the cortex
 
 ```python
 # this will create a primary compute path, consisting of
@@ -61,3 +67,8 @@ cortex[:,:] = brain.primary(4,4,4,4,4)
 # on layer 4 on each grid cell
 cortex[:,:] = brain.primary(4,apical=1, basal=3)
 ```
+
+The previous compute path can be closed by a final candle layer, and in many cases routed through convolutional neural layers and a final fully connected layer. Usually this won't be very interesting.
+
+### Lateral compute path
+
