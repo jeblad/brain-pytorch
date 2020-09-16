@@ -6,7 +6,7 @@
 [![GitHub issues](https://img.shields.io/github/issues-raw/jeblad/brain-pytorch?style=for-the-badge)](https://github.com/jeblad/brain-pytorch/issues/)
 [![Documentation Status](https://readthedocs.org/projects/brain-pytorch/badge/?style=for-the-badge&version=latest)](https://brain-pytorch.readthedocs.io/en/latest/?badge=latest)
 
-A PyTorch implementation of some simplified computing elements from the brain. The elements are according to a somewhat coarse and rudimentary theory on how parts of the brain might work.
+A PyTorch implementation of some simplified computing elements from the brain. The elements are according to a somewhat coarse and rudimentary theory on how parts of the brain might work. These are at best mechanistic models, but are more likely [surrogate models](https://en.wikipedia.org/wiki/Surrogate_model) for postulated behavior.
 
 ## Usage
 
